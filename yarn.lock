@@ -6596,7 +6596,7 @@ last-call-webpack-plugin@^3.0.0:
 
 "layouter-client-helper@https://github.com/kazukinagata/layouter-client-helper.git":
   version "1.2.2"
-  resolved "https://github.com/kazukinagata/layouter-client-helper.git#6aa8ae0ab9c8feb4e7c005fea314bcd66bdf9330"
+  resolved "https://github.com/kazukinagata/layouter-client-helper.git#fa6e933a34aef6711f8d6c76c6e6d36e6e91346d"
   dependencies:
     "@types/node" "^14.0.27"
     axios "^0.19.2"

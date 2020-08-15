@@ -73,7 +73,7 @@ function App() {
     setLoading(true)
     try {
       const res = await helper.toPng(ClientHelper.prepareData(data))
-      setPNGs(res.map(r => r.data))
+      setPNGs(res)
     } catch (error) {
       console.log(error)
     }
