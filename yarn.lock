@@ -1644,11 +1644,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.53.tgz#be0d375933c3d15ef2380dafb3b0350ea7021129"
   integrity sha512-51MYTDTyCziHb70wtGNFRwB4l+5JNvdqzFSkbDvpbftEgVUBEE+T5f7pROhWMp/fxp07oNIEQZd5bbfAH22ohQ==
 
-"@types/node@^14.0.27":
-  version "14.0.27"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
-  integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
-
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -6594,14 +6589,6 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
-"layouter-client-helper@https://github.com/kazukinagata/layouter-client-helper.git":
-  version "1.2.2"
-  resolved "https://github.com/kazukinagata/layouter-client-helper.git#fa6e933a34aef6711f8d6c76c6e6d36e6e91346d"
-  dependencies:
-    "@types/node" "^14.0.27"
-    axios "^0.19.2"
-    typescript "^3.9.7"
-
 lazy-cache@^0.2.3:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-0.2.7.tgz#7feddf2dcb6edb77d11ef1d117ab5ffdf0ab1b65"
@@ -10400,11 +10387,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typescript@^3.9.7:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 typescript@~3.7.2:
   version "3.7.5"

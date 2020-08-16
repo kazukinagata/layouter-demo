@@ -1,5 +1,5 @@
 {
-  "name": "layouter-demo",
+  "name": "@koishidev/layouter-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,6 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "axios": "^0.19.2",
-    "layouter-client-helper": "https://github.com/kazukinagata/layouter-client-helper.git",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
