@@ -1363,14 +1363,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@koishidev/layouter-client-helper@1.2.6":
-  version "1.2.6"
-  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.6/ac7c5cd442f42b6e281233ffad7bb50700224da23253a02e3158d8b6f47aa508#914ff1f75ac36738c473404ff9975a619a93eb7c"
-  integrity sha512-oQvEd8gGXOKLP10BzwlFOW4IbBZXoaFuzyVPwEMYZjZxMtmcSAp1goJurNuCo0zOPtqpOqw7MAqBDIZ4wVvq9A==
+"@koishidev/layouter-client-helper@1.2.7":
+  version "1.2.7"
+  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.7/861b5370fa803f9292f5a0daaf649dc37f8b80bd95c170947ba66bd7a4797316#10b5c469f0ce0aaea3319d8c4f84f065e95fa5aa"
+  integrity sha512-0jBZnqxcF0t3lB25GE/ZPNIYPCehZswb3UaD+71Rku5kwMfnJ5qx0ut1vbKHuVyoBgo/Vb60H3RFg5ShTQvhMw==
   dependencies:
-    "@types/node" "^14.0.27"
     axios "^0.19.2"
-    typescript "^3.9.7"
 
 "@material-ui/core@^4.11.0":
   version "4.11.0"
@@ -1710,7 +1708,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^14.0.27":
+"@types/node@*":
   version "14.0.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
   integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
@@ -10522,11 +10520,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typescript@^3.9.7:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 typescript@~3.7.2:
   version "3.7.5"

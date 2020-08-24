@@ -3,27 +3,36 @@ import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import ClientHelper from '@koishidev/layouter-client-helper'
-import { settings } from './settings'
 import SVGFormFields from './SVGForm'
 import Button from '@material-ui/core/Button'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Dialog from './Dialog'
-export type SVGForm = {
-  [inputId: string]: {
-    id: string
-    tag: string
-    label: string
-    value: string
-  }
+import config from './demo.config.json'
+
+export type Tag = 'input' | 'textArea'
+export interface SVGFormAttrs {
+  id: string
+  tag: Tag
+  label: string
+  value: string
+  order: number
+  parent?: string
 }
-type Inputs = {
+export type SVGForm = {
+  [inputId: string]: SVGFormAttrs
+}
+export type Inputs = {
   [svgId: string]: SVGForm
 }
 
 function App() {
-  const helper = new ClientHelper(settings.token, settings.layoutId, process.env.REACT_APP_API_ROOT)
-  const [svgs, setSvgs] = React.useState<string[]>()
-  const [data, setData] = React.useState<Inputs>(settings.inputs)
+  const helper = new ClientHelper(
+    config.token,
+    config.layoutId,
+    process.env.REACT_APP_API_ROOT
+  )
+  const [svgs, setSvgs] = React.useState<string[]>([])
+  const [data, setData] = React.useState<Inputs>(config.inputs as Inputs)
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
 
@@ -62,6 +71,7 @@ function App() {
   const handlePreview = async () => {
     try {
       setLoading(true)
+      console.log(ClientHelper.prepareData(data))
       const res = await helper.update(ClientHelper.prepareData(data))
       setSvgs(res)
     } catch (error) {
@@ -91,26 +101,28 @@ function App() {
             PNG変換
           </Button>
         </Box>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            {svgs &&
-              svgs.map((base64, i) => (
+
+        {Object.keys(data).map((key, i) => (
+          <Box mb={4}>
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
                 <Box key={i}>
-                  <img src={`data:image/svg+xml;base64,${base64}`} />
+                  {svgs[i] && (
+                    <img src={`data:image/svg+xml;base64,${svgs[i]}`} />
+                  )}
                 </Box>
-              ))}
-          </Grid>
-          <Grid item xs={6}>
-            {Object.keys(data).map((key) => (
-              <form noValidate autoComplete='off' key={key}>
-                <SVGFormFields
-                  fields={data[key]}
-                  onChange={(event) => handleChange(event, key)}
-                />
-              </form>
-            ))}
-          </Grid>
-        </Grid>
+              </Grid>
+              <Grid item xs={6}>
+                <form noValidate autoComplete='off' key={key}>
+                  <SVGFormFields
+                    fields={data[key]}
+                    onChange={(event) => handleChange(event, key)}
+                  />
+                </form>
+              </Grid>
+            </Grid>
+          </Box>
+        ))}
         <Dialog data={pngs} onClose={() => setPNGs([])} />
       </Container>
     </>

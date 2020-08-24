@@ -41,8 +41,6 @@ export default function ({ data, onClose }: Props) {
     onClose()
   }
 
-  console.log(data)
-
   const srcs = data.map((ab) => {
     const bytes = new Uint8Array(ab)
     let binaryData = ''

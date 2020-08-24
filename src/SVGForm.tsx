@@ -14,7 +14,7 @@ export default function SVGFormFields({fields, onChange}: Props) {
     <>
       {fieldArr.map((field) => (
         <FormControl fullWidth margin='normal' key={field.id}>
-          <TextField name={field.id} label={field.label} value={field.value} onChange={onChange} />
+          <TextField name={field.id} label={field.label} value={field.value} onChange={onChange} multiline={field.tag === 'textArea'} />
         </FormControl>
       ))}
     </>
