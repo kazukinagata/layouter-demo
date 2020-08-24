@@ -24,8 +24,7 @@ export type SVGForm = {
 export type Inputs = {
   [svgId: string]: SVGForm
 }
-
-function App() {
+export default function App() {
   const helper = new ClientHelper(
     config.token,
     config.layoutId,
@@ -129,4 +128,3 @@ function App() {
   )
 }
 
-export default App
