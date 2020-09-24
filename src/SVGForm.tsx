@@ -1,7 +1,7 @@
 import React from 'react'
-import { SVGForm } from './App'
 import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
+import { SVGForm } from '@koishidev/layouter-client-helper'
 
 type Props = {
   fields: SVGForm,

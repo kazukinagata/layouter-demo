@@ -2,28 +2,13 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
-import ClientHelper from '@koishidev/layouter-client-helper'
+import ClientHelper, { Inputs } from '@koishidev/layouter-client-helper'
 import SVGFormFields from './SVGForm'
 import Button from '@material-ui/core/Button'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Dialog from './Dialog'
 import config from './demo.config.json'
 
-export type Tag = 'input' | 'textArea'
-export interface SVGFormAttrs {
-  id: string
-  tag: Tag
-  label: string
-  value: string
-  order: number
-  parent?: string
-}
-export type SVGForm = {
-  [inputId: string]: SVGFormAttrs
-}
-export type Inputs = {
-  [svgId: string]: SVGForm
-}
 export default function App() {
   const helper = new ClientHelper(
     config.token,
@@ -39,7 +24,7 @@ export default function App() {
     ;(async () => {
       setLoading(true)
       try {
-        const srcArr = await helper.initialize()
+        const srcArr = await helper.getInit()
         setSvgs(srcArr)
       } catch (error) {
         console.log(error)
@@ -59,10 +44,13 @@ export default function App() {
       ...data,
       [svgId]: {
         ...data[svgId],
-        [inputId]: {
-          ...data[svgId][inputId],
-          value,
-        },
+        elements: {
+          ...data[svgId].elements,
+          [inputId]: {
+            ...data[svgId].elements[inputId],
+            value,
+          },
+        }
       },
     })
   }
@@ -81,7 +69,7 @@ export default function App() {
   const handleGetPng = async () => {
     setLoading(true)
     try {
-      const res = await helper.toPng(ClientHelper.prepareData(data))
+      const res = await helper.toPng(ClientHelper.prepareData(data), 'thumbnail')
       setPNGs(res)
     } catch (error) {
       console.log(error)
@@ -102,7 +90,7 @@ export default function App() {
         </Box>
 
         {Object.keys(data).map((key, i) => (
-          <Box mb={4}>
+          <Box mb={4} key={key}>
             <Grid container spacing={2}>
               <Grid item xs={6}>
                 <Box key={i}>
@@ -114,7 +102,7 @@ export default function App() {
               <Grid item xs={6}>
                 <form noValidate autoComplete='off' key={key}>
                   <SVGFormFields
-                    fields={data[key]}
+                    fields={data[key].elements}
                     onChange={(event) => handleChange(event, key)}
                   />
                 </form>

@@ -1,133 +1,67 @@
 {
-  "token": "4939cfc06a0af0446c9adbc371b92f9bdcd8f8916aae74aa032a3163f13cdf0d",
-  "layoutId": "TNxmgVJcIDUJ3xXvqDkc",
+  "token": "da5e7651ed923989aace98377cc58e1ac7a6ae01050c65c02257cb62258ce2e3",
+  "layoutId": "w5pjXSDLcWxSr44Fv3NA",
+  "version": "1.0.0",
   "inputs": {
-    "24086c81-8a45-4583-9187-a7f67e2b3188": {
-      "c653a1d2-a6c4-4e87-b306-82bcbd2fe3ec": {
-        "id": "c653a1d2-a6c4-4e87-b306-82bcbd2fe3ec",
-        "tag": "input",
-        "label": "部署名１",
-        "value": "総務人事本部",
-        "order": 0
-      },
-      "c23d534c-98ad-4afb-8ff7-63d585c31064": {
-        "id": "c23d534c-98ad-4afb-8ff7-63d585c31064",
-        "tag": "input",
-        "label": "部署名２",
-        "value": "健康管理センター",
-        "order": 1
-      },
-      "a74b5d98-34c1-4277-a6e3-70288f6cd089": {
-        "id": "a74b5d98-34c1-4277-a6e3-70288f6cd089",
-        "tag": "input",
-        "label": "氏名",
-        "value": "鈴木 あゆみ",
-        "order": 2
-      },
-      "db3a3a39-77eb-4b9f-89b6-dfb7c61f148a": {
-        "id": "db3a3a39-77eb-4b9f-89b6-dfb7c61f148a",
-        "tag": "input",
-        "label": "住所１",
-        "value": "〒141-0033 東京都品川区西品川一丁目１番１号 住友不動産大崎ガーデンタワー8F",
-        "order": 3
-      },
-      "ea2bc82d-0a9a-428a-b2a6-c9c9152eb7fb": {
-        "id": "ea2bc82d-0a9a-428a-b2a6-c9c9152eb7fb",
-        "tag": "input",
-        "label": "住所２",
-        "value": "セガサミーグループ本社 “GRAND HARBOR”",
-        "order": 4
-      },
-      "a7349ec3-6255-43b5-b555-1b75aaaf4519": {
-        "id": "a7349ec3-6255-43b5-b555-1b75aaaf4519",
-        "tag": "input",
-        "label": "電話・FAX",
-        "value": "Tel 03-6864-3332 Fax 050-3153-7987",
-        "order": 5
-      },
-      "5dac682f-5c03-4946-a9e4-46f0507c49aa": {
-        "id": "5dac682f-5c03-4946-a9e4-46f0507c49aa",
-        "tag": "input",
-        "label": "URL",
-        "value": "https://www.segasammy.co.jp",
-        "order": 6
-      }
-    },
-    "4d8c6062-5ebb-4f82-a4eb-64b92cc38b26": {
-      "a7a15bcc-e58b-4499-bb8a-ad863c2188bc": {
-        "id": "a7a15bcc-e58b-4499-bb8a-ad863c2188bc",
-        "tag": "input",
-        "label": "Department",
-        "value": "Planning and production",
-        "order": 0
-      },
-      "ed60ae12-0e69-4b18-9ef0-554d0c9ad5a3": {
-        "id": "ed60ae12-0e69-4b18-9ef0-554d0c9ad5a3",
-        "tag": "input",
-        "label": "Job title",
-        "value": "Designer",
-        "order": 1
-      },
-      "b727190b-0454-49ac-8e00-b6fb1a6d4c16": {
-        "id": "b727190b-0454-49ac-8e00-b6fb1a6d4c16",
-        "tag": "input",
-        "label": "Name",
-        "value": "Suzuki",
-        "parent": "77b28883-fd2d-447c-90c7-ad0baf99ae7f",
-        "order": 2
-      },
-      "d631881e-4394-4cf8-b186-120413e5d7de": {
-        "id": "d631881e-4394-4cf8-b186-120413e5d7de",
-        "tag": "input",
-        "label": "Name",
-        "value": "Ayumi",
-        "parent": "77b28883-fd2d-447c-90c7-ad0baf99ae7f",
-        "order": 3
-      },
-      "d64f0c51-7423-406a-b2fc-ac5e0693e33c": {
-        "id": "d64f0c51-7423-406a-b2fc-ac5e0693e33c",
-        "tag": "textArea",
-        "label": "Message",
-        "value": "私たちは＂コレが欲しかった！＂を見つ\nける会社です。ぜひみなさまのこだわり\nやお悩みをお聞かせください。",
-        "order": 4
-      },
-      "8c7b86d1-a3c5-4fd7-89ca-0c4339902838": {
-        "id": "8c7b86d1-a3c5-4fd7-89ca-0c4339902838",
-        "tag": "input",
-        "label": "Address",
-        "value": "〒",
-        "parent": "be96fab7-62df-4087-abee-052d5d8b128e",
-        "order": 5
-      },
-      "13f556b3-4f43-46bc-999b-942a286dda04": {
-        "id": "13f556b3-4f43-46bc-999b-942a286dda04",
-        "tag": "input",
-        "label": "Address",
-        "value": "173-0025",
-        "parent": "be96fab7-62df-4087-abee-052d5d8b128e",
-        "order": 6
-      },
-      "c9130db1-399c-4f90-be54-b86d89326573": {
-        "id": "c9130db1-399c-4f90-be54-b86d89326573",
-        "tag": "input",
-        "label": "Address",
-        "value": "東京都板橋区熊野町15-8",
-        "parent": "be96fab7-62df-4087-abee-052d5d8b128e",
-        "order": 7
-      },
-      "daaf0b75-adea-472a-8686-5a02e9b74294": {
-        "id": "daaf0b75-adea-472a-8686-5a02e9b74294",
-        "tag": "input",
-        "label": "Tel/Fax",
-        "value": "Tel 03-3554-4381 Fax 03-3554-4382",
-        "order": 8
-      },
-      "11d98a32-586a-4561-8874-418f920bfa18": {
-        "id": "11d98a32-586a-4561-8874-418f920bfa18",
-        "tag": "input",
-        "label": "URL",
-        "value": "https://koishikawa.co.jp",
-        "order": 9
+    "af148e89-a59c-490f-a3ef-1dcec2de8402": {
+      "name": "新しいページ",
+      "elements": {
+        "6da4e8be-0829-41da-a122-93467e4d1bf4": {
+          "id": "6da4e8be-0829-41da-a122-93467e4d1bf4",
+          "tag": "input",
+          "label": "部署１",
+          "value": "総務人事本部",
+          "fieldId": "department1",
+          "order": 0
+        },
+        "3d8ebf2d-c553-44cf-a093-0513d0892b85": {
+          "id": "3d8ebf2d-c553-44cf-a093-0513d0892b85",
+          "tag": "input",
+          "label": "部署２",
+          "value": "健康管理センター",
+          "fieldId": "department2",
+          "order": 1
+        },
+        "fd3824d6-12e0-461d-aca9-453f79f39704": {
+          "id": "fd3824d6-12e0-461d-aca9-453f79f39704",
+          "tag": "input",
+          "label": "氏名（姓名）",
+          "value": "鈴木 あゆみ",
+          "fieldId": "name",
+          "order": 2
+        },
+        "872b9704-998b-4c43-9ce1-2e0cbd8d2a55": {
+          "id": "872b9704-998b-4c43-9ce1-2e0cbd8d2a55",
+          "tag": "input",
+          "label": "連結住所",
+          "value": "〒141-0033 東京都品川区西品川一丁目１番１号 住友不動産大崎ガーデンタワー8F",
+          "fieldId": "address",
+          "order": 3
+        },
+        "b5d062b1-25c5-4d3b-ae1b-82c77da0f954": {
+          "id": "b5d062b1-25c5-4d3b-ae1b-82c77da0f954",
+          "tag": "input",
+          "label": "会社名",
+          "value": "セガサミーグループ本社 “GRAND HARBOR”",
+          "fieldId": "companyName",
+          "order": 4
+        },
+        "90e72115-69a7-4d76-b7e3-21ce2161ab47": {
+          "id": "90e72115-69a7-4d76-b7e3-21ce2161ab47",
+          "tag": "input",
+          "label": "連結会社電話番号",
+          "value": "Tel 03-6864-3332 Fax 050-3153-7987",
+          "fieldId": "companyTel",
+          "order": 5
+        },
+        "56c97fef-9aa0-47a9-b99b-d0a09dfd77da": {
+          "id": "56c97fef-9aa0-47a9-b99b-d0a09dfd77da",
+          "tag": "input",
+          "label": "URL",
+          "value": "https://www.segasammy.co.jp",
+          "fieldId": "custom",
+          "order": 6
+        }
       }
     }
   }
