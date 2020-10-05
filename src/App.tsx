@@ -7,8 +7,50 @@ import SVGFormFields from './SVGForm'
 import Button from '@material-ui/core/Button'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Dialog from './Dialog'
+import BatchResult from './BatchResult'
 import config from './demo.config.json'
 
+const batchContents = {
+  1: [
+    {
+      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      value: '木村拓哉',
+    },
+    {
+      uuid: '872b9704-998b-4c43-9ce1-2e0cbd8d2a55',
+      value: '東京都港区赤坂1-12-32'
+    }
+  ],
+  2: [
+    {
+      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      value: '中居正広',
+    },
+    {
+      uuid: '872b9704-998b-4c43-9ce1-2e0cbd8d2a55',
+      value: '東京都千代田区1-1-1'
+    }
+  ],
+  3: [
+    {
+      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      value: '草彅剛',
+    },
+  ],
+  4: [
+    {
+      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      value: '香取慎吾',
+    },
+  ],
+  5: [
+    {
+      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      value: '稲垣吾郎',
+    },
+  ],
+  6: [],
+}
 export default function App() {
   const helper = new ClientHelper(
     config.token,
@@ -19,6 +61,7 @@ export default function App() {
   const [data, setData] = React.useState<Inputs>(config.inputs as Inputs)
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
+  const [batchResults, setBatchResults] = React.useState<{[x: string]: string[]}>({})
 
   React.useEffect(() => {
     ;(async () => {
@@ -76,6 +119,16 @@ export default function App() {
     }
     setLoading(false)
   }
+  const handleBatchRequest = async () => {
+    setLoading(true)
+    try {
+      const res = await helper.batchCreatePngs(batchContents)
+      setBatchResults(res)
+    } catch (error) {
+      console.log(error)
+    }
+    setLoading(false)
+  }
   return (
     <>
       {loading && <LinearProgress color='primary' />}
@@ -86,6 +139,9 @@ export default function App() {
           </Button>
           <Button variant='contained' onClick={handleGetPng}>
             PNG変換
+          </Button>
+          <Button variant='contained' onClick={handleBatchRequest}>
+            バッチリクエスト
           </Button>
         </Box>
 
@@ -111,6 +167,7 @@ export default function App() {
           </Box>
         ))}
         <Dialog data={pngs} onClose={() => setPNGs([])} />
+        <BatchResult data={batchResults} onClose={() => setBatchResults({})} src={batchContents} />
       </Container>
     </>
   )
