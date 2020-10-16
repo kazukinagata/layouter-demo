@@ -1,61 +1,61 @@
 {
   "token": "da5e7651ed923989aace98377cc58e1ac7a6ae01050c65c02257cb62258ce2e3",
-  "layoutId": "w5pjXSDLcWxSr44Fv3NA",
+  "layoutId": "JuhfkD3dH5RoTETEUALl",
   "version": "1.0.0",
   "inputs": {
-    "af148e89-a59c-490f-a3ef-1dcec2de8402": {
+    "24119cc4-1246-424f-8bf2-ff1359bbdcd3": {
       "name": "新しいページ",
       "elements": {
-        "6da4e8be-0829-41da-a122-93467e4d1bf4": {
-          "id": "6da4e8be-0829-41da-a122-93467e4d1bf4",
+        "6b1b383f-db20-4d18-a219-5f08c76b645a": {
+          "id": "6b1b383f-db20-4d18-a219-5f08c76b645a",
           "tag": "input",
           "label": "部署１",
           "value": "総務人事本部",
           "fieldId": "department1",
           "order": 0
         },
-        "3d8ebf2d-c553-44cf-a093-0513d0892b85": {
-          "id": "3d8ebf2d-c553-44cf-a093-0513d0892b85",
+        "8beefca8-090b-4cf7-b107-861f389c2ae4": {
+          "id": "8beefca8-090b-4cf7-b107-861f389c2ae4",
           "tag": "input",
           "label": "部署２",
           "value": "健康管理センター",
           "fieldId": "department2",
           "order": 1
         },
-        "fd3824d6-12e0-461d-aca9-453f79f39704": {
-          "id": "fd3824d6-12e0-461d-aca9-453f79f39704",
+        "116c0e92-2ca4-4152-8069-eb842cf128af": {
+          "id": "116c0e92-2ca4-4152-8069-eb842cf128af",
           "tag": "input",
           "label": "氏名（姓名）",
           "value": "鈴木 あゆみ",
           "fieldId": "name",
           "order": 2
         },
-        "872b9704-998b-4c43-9ce1-2e0cbd8d2a55": {
-          "id": "872b9704-998b-4c43-9ce1-2e0cbd8d2a55",
+        "b118451a-b57d-4ac6-9c9a-41201b23eca0": {
+          "id": "b118451a-b57d-4ac6-9c9a-41201b23eca0",
           "tag": "input",
           "label": "連結住所",
           "value": "〒141-0033 東京都品川区西品川一丁目１番１号 住友不動産大崎ガーデンタワー8F",
           "fieldId": "address",
           "order": 3
         },
-        "b5d062b1-25c5-4d3b-ae1b-82c77da0f954": {
-          "id": "b5d062b1-25c5-4d3b-ae1b-82c77da0f954",
+        "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e": {
+          "id": "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e",
           "tag": "input",
           "label": "会社名",
           "value": "セガサミーグループ本社 “GRAND HARBOR”",
           "fieldId": "companyName",
           "order": 4
         },
-        "90e72115-69a7-4d76-b7e3-21ce2161ab47": {
-          "id": "90e72115-69a7-4d76-b7e3-21ce2161ab47",
+        "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59": {
+          "id": "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59",
           "tag": "input",
           "label": "連結会社電話番号",
           "value": "Tel 03-6864-3332 Fax 050-3153-7987",
           "fieldId": "companyTel",
           "order": 5
         },
-        "56c97fef-9aa0-47a9-b99b-d0a09dfd77da": {
-          "id": "56c97fef-9aa0-47a9-b99b-d0a09dfd77da",
+        "ba543ead-65d8-4152-93bc-b022d9720e4d": {
+          "id": "ba543ead-65d8-4152-93bc-b022d9720e4d",
           "tag": "input",
           "label": "URL",
           "value": "https://www.segasammy.co.jp",
