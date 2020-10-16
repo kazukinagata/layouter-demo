@@ -13,39 +13,39 @@ import config from './demo.config.json'
 const batchContents = {
   1: [
     {
-      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '木村拓哉',
     },
     {
-      uuid: '872b9704-998b-4c43-9ce1-2e0cbd8d2a55',
+      uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
       value: '東京都港区赤坂1-12-32'
     }
   ],
   2: [
     {
-      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '中居正広',
     },
     {
-      uuid: '872b9704-998b-4c43-9ce1-2e0cbd8d2a55',
+      uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
       value: '東京都千代田区1-1-1'
     }
   ],
   3: [
     {
-      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '草彅剛',
     },
   ],
   4: [
     {
-      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '香取慎吾',
     },
   ],
   5: [
     {
-      uuid: 'fd3824d6-12e0-461d-aca9-453f79f39704',
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '稲垣吾郎',
     },
   ],
