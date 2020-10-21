@@ -18,8 +18,8 @@ const batchContents = {
     },
     {
       uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
-      value: '東京都港区赤坂1-12-32'
-    }
+      value: '東京都港区赤坂1-12-32',
+    },
   ],
   2: [
     {
@@ -28,8 +28,8 @@ const batchContents = {
     },
     {
       uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
-      value: '東京都千代田区1-1-1'
-    }
+      value: '東京都千代田区1-1-1',
+    },
   ],
   3: [
     {
@@ -57,18 +57,21 @@ export default function App() {
     config.layoutId,
     process.env.REACT_APP_API_ROOT
   )
-  const [svgs, setSvgs] = React.useState<string[]>([])
+  const [pdf, setPDF] = React.useState<string>('')
   const [data, setData] = React.useState<Inputs>(config.inputs as Inputs)
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
-  const [batchResults, setBatchResults] = React.useState<{[x: string]: string[]}>({})
+  const [batchResults, setBatchResults] = React.useState<{
+    [x: string]: string[]
+  }>({})
 
   React.useEffect(() => {
     ;(async () => {
       setLoading(true)
       try {
-        const srcArr = await helper.getInit()
-        setSvgs(srcArr)
+        const pdf = await helper.getInit()
+        console.log(pdf)
+        setPDF(pdf)
       } catch (error) {
         console.log(error)
       }
@@ -93,7 +96,7 @@ export default function App() {
             ...data[svgId].elements[inputId],
             value,
           },
-        }
+        },
       },
     })
   }
@@ -102,8 +105,8 @@ export default function App() {
     try {
       setLoading(true)
       console.log(ClientHelper.prepareData(data))
-      const res = await helper.update(ClientHelper.prepareData(data))
-      setSvgs(res)
+      const pdf = await helper.update(ClientHelper.prepareData(data))
+      setPDF(pdf)
     } catch (error) {
       console.log(error)
     }
@@ -112,7 +115,10 @@ export default function App() {
   const handleGetPng = async () => {
     setLoading(true)
     try {
-      const res = await helper.toPng(ClientHelper.prepareData(data), 'thumbnail')
+      const res = await helper.toPng(
+        ClientHelper.prepareData(data),
+        'thumbnail'
+      )
       setPNGs(res)
     } catch (error) {
       console.log(error)
@@ -144,32 +150,40 @@ export default function App() {
             バッチリクエスト
           </Button>
         </Box>
-
-        {Object.keys(data).map((key, i) => (
-          <Box mb={4} key={key}>
-            <Grid container spacing={2}>
-              <Grid item xs={6}>
-                <Box key={i}>
-                  {svgs[i] && (
-                    <img src={`data:image/svg+xml;base64,${svgs[i]}`} />
-                  )}
+        <Grid container>
+          <Grid item md={6}>
+            {pdf && (
+              <embed
+                width='100%'
+                height='100%'
+                type='application/pdf'
+                src={`data:application/pdf;base64,${pdf}`}
+              />
+            )}
+          </Grid>
+          <Grid item md={6}>
+            <Box p={2}>
+              {Object.keys(data).map((key, i) => (
+                <Box mb={4} key={key}>
+                  <form noValidate autoComplete='off' key={key}>
+                    <SVGFormFields
+                      fields={data[key].elements}
+                      onChange={(event) => handleChange(event, key)}
+                    />
+                  </form>
                 </Box>
-              </Grid>
-              <Grid item xs={6}>
-                <form noValidate autoComplete='off' key={key}>
-                  <SVGFormFields
-                    fields={data[key].elements}
-                    onChange={(event) => handleChange(event, key)}
-                  />
-                </form>
-              </Grid>
-            </Grid>
-          </Box>
-        ))}
+              ))}
+            </Box>
+          </Grid>
+        </Grid>
+
         <Dialog data={pngs} onClose={() => setPNGs([])} />
-        <BatchResult data={batchResults} onClose={() => setBatchResults({})} src={batchContents} />
+        <BatchResult
+          data={batchResults}
+          onClose={() => setBatchResults({})}
+          src={batchContents}
+        />
       </Container>
     </>
   )
 }
-
