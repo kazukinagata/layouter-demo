@@ -57,21 +57,21 @@ export default function App() {
     config.layoutId,
     process.env.REACT_APP_API_ROOT
   )
-  const [pdf, setPDF] = React.useState<string>('')
+  const [svgs, setSvgs] = React.useState<string[]>([])
   const [data, setData] = React.useState<Inputs>(config.inputs as Inputs)
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
   const [batchResults, setBatchResults] = React.useState<{
     [x: string]: string[]
   }>({})
+  const [pdf, setPDF] = React.useState<string>('')
 
   React.useEffect(() => {
     ;(async () => {
       setLoading(true)
       try {
-        const pdf = await helper.getInit()
-        console.log(pdf)
-        setPDF(pdf)
+        const srcArr = await helper.getInit()
+        setSvgs(srcArr)
       } catch (error) {
         console.log(error)
       }
@@ -105,8 +105,9 @@ export default function App() {
     try {
       setLoading(true)
       console.log(ClientHelper.prepareData(data))
-      const pdf = await helper.update(ClientHelper.prepareData(data))
-      setPDF(pdf)
+      const res = await helper.update(ClientHelper.prepareData(data))
+      setSvgs(res.svg)
+      setPDF(res.pdf)
     } catch (error) {
       console.log(error)
     }
@@ -150,33 +151,38 @@ export default function App() {
             バッチリクエスト
           </Button>
         </Box>
-        <Grid container>
-          <Grid item md={6}>
-            {pdf && (
-              <embed
-                width='100%'
-                height='100%'
-                type='application/pdf'
-                src={`data:application/pdf;base64,${pdf}`}
-              />
-            )}
-          </Grid>
-          <Grid item md={6}>
-            <Box p={2}>
-              {Object.keys(data).map((key, i) => (
-                <Box mb={4} key={key}>
-                  <form noValidate autoComplete='off' key={key}>
-                    <SVGFormFields
-                      fields={data[key].elements}
-                      onChange={(event) => handleChange(event, key)}
-                    />
-                  </form>
-                </Box>
-              ))}
-            </Box>
-          </Grid>
-        </Grid>
 
+        {Object.keys(data).map((key, i) => (
+          <Box mb={4} key={key}>
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                <Box key={i}>
+                  {svgs[i] && (
+                    <img src={`data:image/svg+xml;base64,${svgs[i]}`} />
+                  )}
+                </Box>
+              </Grid>
+              <Grid item xs={6}>
+                <form noValidate autoComplete='off' key={key}>
+                  <SVGFormFields
+                    fields={data[key].elements}
+                    onChange={(event) => handleChange(event, key)}
+                  />
+                </form>
+              </Grid>
+            </Grid>
+          </Box>
+        ))}
+        <Box>
+          {pdf && (
+            <embed
+              width='100%'
+              height='100%'
+              type='application/pdf'
+              src={`data:application/pdf;base64,${pdf}`}
+            />
+          )}
+        </Box>
         <Dialog data={pngs} onClose={() => setPNGs([])} />
         <BatchResult
           data={batchResults}
