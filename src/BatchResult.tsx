@@ -32,7 +32,7 @@ const Transition = React.forwardRef(function Transition(
 })
 
 type Props = {
-  data: { [clientId: string]: string[] }
+  data: { [clientId: string]: {png: string[], pdf: string} }
   onClose: () => void
   src: any
 }
@@ -76,7 +76,8 @@ export default function ({ data, onClose, src }: Props) {
             {Object.keys(data).map((clientId, i) => (
               <Grid item md={3}>
                 <p style={{ marginBottom: '1em' }}>Client id: {clientId}</p>
-                {data[clientId].map((url) => (
+                <p><a href={data[clientId].pdf}>PDF Link</a></p>
+                {data[clientId].png.map((url) => (
                   <Box>
                     <img src={url} alt='' style={{ width: '100%' }} />
                   </Box>

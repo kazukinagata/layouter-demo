@@ -62,7 +62,7 @@ export default function App() {
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
   const [batchResults, setBatchResults] = React.useState<{
-    [x: string]: string[]
+    [x: string]: {png: string[], pdf: string}
   }>({})
   const [pdf, setPDF] = React.useState<string>('')
 
@@ -129,7 +129,7 @@ export default function App() {
   const handleBatchRequest = async () => {
     setLoading(true)
     try {
-      const res = await helper.batchCreatePngs(batchContents)
+      const res = await helper.batchCreate(batchContents)
       setBatchResults(res)
     } catch (error) {
       console.log(error)
