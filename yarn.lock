@@ -1363,10 +1363,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@koishidev/layouter-client-helper@1.2.20":
-  version "1.2.20"
-  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.20/3ec11c2a47c84b503b25ba4612842b5d246dccb0b0b4463a094120378856a9f4#e9188ccb91e3d9ced540f6b12fe1389c2f592a89"
-  integrity sha512-tRwMZ9p+n4x0fxb6XolgTCD4QvmGQCGDbGBXXTu9Z+wPI2nc+FKIKKdBtoz+H6RpSaN9C8Tut0FLE2V9A5ZxEQ==
+"@koishidev/layouter-client-helper@1.2.23":
+  version "1.2.23"
+  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.23/2c0e777575e0587418157dcb907feb1130a4f62ebc6aec81a0e08925ecf4e189#7e214e2b592f2b8338ba3a2b07388942e0d1eb3d"
+  integrity sha512-2gLOgil+HaH79hBh/4p2Yu/5SwiGRzQv0CBAXsvZqMK3Oz7G1IbJswVdwWLepwJ40YA+3Cyyh73N5GzDIISqDg==
   dependencies:
     axios "^0.19.2"
 

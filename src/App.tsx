@@ -10,8 +10,9 @@ import Dialog from './Dialog'
 import BatchResult from './BatchResult'
 import config from './demo.config.json'
 
-const batchContents = {
-  1: [
+type SampleData = {[key: string]: {uuid: string, value: string}[]}
+const data: SampleData = {
+  "1": [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '木村拓哉',
@@ -21,7 +22,7 @@ const batchContents = {
       value: '東京都港区赤坂1-12-32',
     },
   ],
-  2: [
+  "2": [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '中居正広',
@@ -31,26 +32,41 @@ const batchContents = {
       value: '東京都千代田区1-1-1',
     },
   ],
-  3: [
+  "3": [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '草彅剛',
     },
   ],
-  4: [
+  "4": [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '香取慎吾',
     },
   ],
-  5: [
+  "5": [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '稲垣吾郎',
     },
   ],
-  6: [],
 }
+
+const batchContents = Array.from({length: 4}).reduce<SampleData>((obj, _, i) => {
+  const chunk = Object.keys(data).reduce<SampleData>((obj, key, l) => {
+
+    const value = data[key]
+    return {
+      ...obj,
+      [l + i * 5]: value
+    }
+  }, {})
+  return {
+    ...obj,
+    ...chunk
+  }
+}, {})
+
 export default function App() {
   const helper = new ClientHelper(
     config.token,
@@ -129,7 +145,9 @@ export default function App() {
   const handleBatchRequest = async () => {
     setLoading(true)
     try {
+      console.time('excute')
       const res = await helper.batchCreate(batchContents)
+      console.timeEnd('excute')
       setBatchResults(res)
     } catch (error) {
       console.log(error)
