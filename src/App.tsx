@@ -53,7 +53,7 @@ const data: SampleData = {
   ],
 }
 
-const batchContents = Array.from({ length: 1 }).reduce<SampleData>(
+const batchContents = Array.from({ length: 10 }).reduce<SampleData>(
   (obj, _, i) => {
     const chunk = Object.keys(data).reduce<SampleData>((obj, key, l) => {
       const value = data[key]
