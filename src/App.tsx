@@ -53,7 +53,7 @@ const data: SampleData = {
   ],
 }
 
-const batchContents = Array.from({ length: 10 }).reduce<SampleData>(
+const batchContents = Array.from({ length: 1 }).reduce<SampleData>(
   (obj, _, i) => {
     const chunk = Object.keys(data).reduce<SampleData>((obj, key, l) => {
       const value = data[key]
@@ -85,7 +85,7 @@ export default function App() {
   const [progress, setProgress] = React.useState<number | null>(null)
 
   const [batchResults, setBatchResults] = React.useState<{
-    [x: string]: { png: string[]; pdf: string }
+    [x: string]: { svg: string[]; pdf: string }
   }>({})
   const [pdf, setPDF] = React.useState<string>('')
 
