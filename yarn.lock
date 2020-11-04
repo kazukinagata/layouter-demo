@@ -1363,10 +1363,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@koishidev/layouter-client-helper@1.2.23":
-  version "1.2.23"
-  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.23/2c0e777575e0587418157dcb907feb1130a4f62ebc6aec81a0e08925ecf4e189#7e214e2b592f2b8338ba3a2b07388942e0d1eb3d"
-  integrity sha512-2gLOgil+HaH79hBh/4p2Yu/5SwiGRzQv0CBAXsvZqMK3Oz7G1IbJswVdwWLepwJ40YA+3Cyyh73N5GzDIISqDg==
+"@koishidev/layouter-client-helper@1.2.27":
+  version "1.2.27"
+  resolved "https://npm.pkg.github.com/download/@koishidev/layouter-client-helper/1.2.27/e15b70d3db1776be5bdea7b61978f94b65c3df8525b328f03f10262264f0edf0#53ba28493bb30f440c66fd1a90f11478fdd3dac7"
+  integrity sha512-9zZEqEu/HwnSa9Ls3a9tyGCMxuJQKACu1vx2FDx+z6lg/IPGJRtozBGhN1zUx+RyPhm69I3sY9rgGwIA3loqRA==
   dependencies:
     axios "^0.19.2"
 
@@ -3073,6 +3073,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
 clean-css@^4.2.3:
   version "4.2.3"
@@ -9026,7 +9031,16 @@ react-scripts@3.4.1:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-transition-group@^4.4.0:
+react-toastify@^6.0.9:
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.0.9.tgz#2a65e5ad9e05f3ee47664cbc69441498b9d694ce"
+  integrity sha512-StHXv+4kezHUnPyoILlvygSptQ79bxVuvKcC05yXP0FlqQgPA1ue+80BqxZZiCw2jWDGiY2MHyqBfFKf5YzZbA==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-transition-group "^4.4.1"
+
+react-transition-group@^4.4.0, react-transition-group@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
   integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==

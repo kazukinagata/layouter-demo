@@ -9,10 +9,11 @@ import LinearProgress from '@material-ui/core/LinearProgress'
 import Dialog from './Dialog'
 import BatchResult from './BatchResult'
 import config from './demo.config.json'
-
-type SampleData = {[key: string]: {uuid: string, value: string}[]}
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from 'react-toastify'
+type SampleData = { [key: string]: { uuid: string; value: string }[] }
 const data: SampleData = {
-  "1": [
+  '1': [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '木村拓哉',
@@ -22,7 +23,7 @@ const data: SampleData = {
       value: '東京都港区赤坂1-12-32',
     },
   ],
-  "2": [
+  '2': [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '中居正広',
@@ -32,19 +33,19 @@ const data: SampleData = {
       value: '東京都千代田区1-1-1',
     },
   ],
-  "3": [
+  '3': [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '草彅剛',
     },
   ],
-  "4": [
+  '4': [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '香取慎吾',
     },
   ],
-  "5": [
+  '5': [
     {
       uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
       value: '稲垣吾郎',
@@ -52,33 +53,39 @@ const data: SampleData = {
   ],
 }
 
-const batchContents = Array.from({length: 4}).reduce<SampleData>((obj, _, i) => {
-  const chunk = Object.keys(data).reduce<SampleData>((obj, key, l) => {
-
-    const value = data[key]
+const batchContents = Array.from({ length: 1 }).reduce<SampleData>(
+  (obj, _, i) => {
+    const chunk = Object.keys(data).reduce<SampleData>((obj, key, l) => {
+      const value = data[key]
+      return {
+        ...obj,
+        [l + i * 5]: value,
+      }
+    }, {})
     return {
       ...obj,
-      [l + i * 5]: value
+      ...chunk,
     }
-  }, {})
-  return {
-    ...obj,
-    ...chunk
-  }
-}, {})
+  },
+  {}
+)
 
 export default function App() {
   const helper = new ClientHelper(
     config.token,
     config.layoutId,
-    process.env.REACT_APP_API_ROOT
+    process.env.REACT_APP_API_ROOT,
+    true
   )
   const [svgs, setSvgs] = React.useState<string[]>([])
   const [data, setData] = React.useState<Inputs>(config.inputs as Inputs)
   const [loading, setLoading] = React.useState(false)
   const [pngs, setPNGs] = React.useState<ArrayBuffer[]>([])
+  const [queueId, setQueueId] = React.useState<string | null>(null)
+  const [progress, setProgress] = React.useState<number | null>(null)
+
   const [batchResults, setBatchResults] = React.useState<{
-    [x: string]: {png: string[], pdf: string}
+    [x: string]: { png: string[]; pdf: string }
   }>({})
   const [pdf, setPDF] = React.useState<string>('')
 
@@ -145,15 +152,33 @@ export default function App() {
   const handleBatchRequest = async () => {
     setLoading(true)
     try {
-      console.time('excute')
       const res = await helper.batchCreate(batchContents)
-      console.timeEnd('excute')
-      setBatchResults(res)
+      setQueueId(res.id)
+      toast(`Queue ${res.id}を実行中`)
     } catch (error) {
       console.log(error)
     }
     setLoading(false)
   }
+
+  React.useEffect(() => {
+    if (!queueId) return
+
+    const timer = setInterval(async () => {
+      const res = await helper.batchPolling(queueId)
+      setProgress(res.progress)
+      if (res.progress >= 100 ) {
+        clearInterval(timer)
+        res.value && setBatchResults(res.value)
+        toast.success(`Queue ${res.id}が完了しました`)
+      }
+    }, 3000)
+
+    return () => {
+      timer && clearInterval(timer)
+    }
+  }, [queueId])
+
   return (
     <>
       {loading && <LinearProgress color='primary' />}
@@ -167,6 +192,7 @@ export default function App() {
           </Button>
           <Button variant='contained' onClick={handleBatchRequest}>
             バッチリクエスト
+            {progress !== null && `progress: ${progress}%`}
           </Button>
         </Box>
 
@@ -208,6 +234,7 @@ export default function App() {
           src={batchContents}
         />
       </Container>
+      <ToastContainer autoClose={false} />
     </>
   )
 }
