@@ -15,40 +15,52 @@ type SampleData = { [key: string]: { uuid: string; value: string }[] }
 const data: SampleData = {
   '1': [
     {
-      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
-      value: '木村拓哉',
+      uuid: 'a12dbf4c-1168-46f3-99eb-b2be9b52b0b4',
+      value: '木村',
     },
     {
-      uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
-      value: '東京都港区赤坂1-12-32',
+      uuid: 'a1711fd4-3002-4efb-ab24-90d898fc5ca2',
+      value: '拓哉',
     },
   ],
   '2': [
     {
-      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
-      value: '中居正広',
+      uuid: 'a12dbf4c-1168-46f3-99eb-b2be9b52b0b4',
+      value: '中居',
     },
     {
-      uuid: 'b118451a-b57d-4ac6-9c9a-41201b23eca0',
-      value: '東京都千代田区1-1-1',
+      uuid: 'a1711fd4-3002-4efb-ab24-90d898fc5ca2',
+      value: '正広',
     },
   ],
   '3': [
     {
-      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
-      value: '草彅剛',
+      uuid: 'a12dbf4c-1168-46f3-99eb-b2be9b52b0b4',
+      value: '草彅',
+    },
+    {
+      uuid: 'a1711fd4-3002-4efb-ab24-90d898fc5ca2',
+      value: '剛',
     },
   ],
   '4': [
     {
-      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
-      value: '香取慎吾',
+      uuid: 'a12dbf4c-1168-46f3-99eb-b2be9b52b0b4',
+      value: '香取',
+    },
+    {
+      uuid: 'a1711fd4-3002-4efb-ab24-90d898fc5ca2',
+      value: '慎吾',
     },
   ],
   '5': [
     {
-      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
-      value: '稲垣吾郎',
+      uuid: 'a12dbf4c-1168-46f3-99eb-b2be9b52b0b4',
+      value: '稲垣',
+    },
+    {
+      uuid: 'a1711fd4-3002-4efb-ab24-90d898fc5ca2',
+      value: '吾郎',
     },
   ],
 }
@@ -202,7 +214,7 @@ export default function App() {
               <Grid item xs={6}>
                 <Box key={i}>
                   {svgs[i] && (
-                    <img src={`data:image/svg+xml;base64,${svgs[i]}`} />
+                    <img src={`data:image/svg+xml;base64,${svgs[i]}`} style={{width: '100%'}} />
                   )}
                 </Box>
               </Grid>

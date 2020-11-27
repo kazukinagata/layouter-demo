@@ -1,68 +1,69 @@
 {
   "token": "da5e7651ed923989aace98377cc58e1ac7a6ae01050c65c02257cb62258ce2e3",
-  "layoutId": "JuhfkD3dH5RoTETEUALl",
+  "layoutId": "TH9xcSXe05BIkg1mS8S8",
   "version": "1.0.0",
   "inputs": {
-    "24119cc4-1246-424f-8bf2-ff1359bbdcd3": {
-      "name": "新しいページ",
+    "ab8bc75f-5e44-46bb-a5a1-270c5b691a34": {
+      "name": "表",
       "elements": {
-        "6b1b383f-db20-4d18-a219-5f08c76b645a": {
-          "id": "6b1b383f-db20-4d18-a219-5f08c76b645a",
+        "307e3f84-e573-4add-bc3d-2ee1080bb9cb": {
+          "id": "307e3f84-e573-4add-bc3d-2ee1080bb9cb",
           "tag": "input",
-          "label": "部署１",
-          "value": "総務人事本部",
-          "fieldId": "department1",
+          "label": "役職",
+          "value": "代表取締役 社長",
+          "parent": "34ac8914-7bd6-4f8e-af73-28c322927eb6",
+          "fieldId": "custom",
           "order": 0
         },
-        "8beefca8-090b-4cf7-b107-861f389c2ae4": {
-          "id": "8beefca8-090b-4cf7-b107-861f389c2ae4",
-          "tag": "input",
-          "label": "部署２",
-          "value": "健康管理センター",
-          "fieldId": "department2",
-          "order": 1
-        },
-        "116c0e92-2ca4-4152-8069-eb842cf128af": {
-          "id": "116c0e92-2ca4-4152-8069-eb842cf128af",
+        "a12dbf4c-1168-46f3-99eb-b2be9b52b0b4": {
+          "id": "a12dbf4c-1168-46f3-99eb-b2be9b52b0b4",
           "tag": "input",
           "label": "氏名（姓名）",
-          "value": "鈴木 あゆみ",
+          "value": "佐々木",
+          "parent": "c4c01191-b93c-4c85-b802-934109b12b8b",
+          "fieldId": "name",
+          "order": 1
+        },
+        "a1711fd4-3002-4efb-ab24-90d898fc5ca2": {
+          "id": "a1711fd4-3002-4efb-ab24-90d898fc5ca2",
+          "tag": "input",
+          "label": "氏名（姓名）",
+          "value": "政充",
+          "parent": "c4c01191-b93c-4c85-b802-934109b12b8b",
           "fieldId": "name",
           "order": 2
         },
-        "b118451a-b57d-4ac6-9c9a-41201b23eca0": {
-          "id": "b118451a-b57d-4ac6-9c9a-41201b23eca0",
-          "tag": "input",
-          "label": "連結住所",
-          "value": "〒141-0033 東京都品川区西品川一丁目１番１号 住友不動産大崎ガーデンタワー8F",
-          "fieldId": "address",
-          "order": 3
-        },
-        "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e": {
-          "id": "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e",
-          "tag": "input",
-          "label": "会社名",
-          "value": "セガサミーグループ本社 “GRAND HARBOR”",
-          "fieldId": "companyName",
-          "order": 4
-        },
-        "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59": {
-          "id": "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59",
-          "tag": "input",
-          "label": "連結会社電話番号",
-          "value": "Tel 03-6864-3332 Fax 050-3153-7987",
-          "fieldId": "companyTel",
-          "order": 5
-        },
-        "ba543ead-65d8-4152-93bc-b022d9720e4d": {
-          "id": "ba543ead-65d8-4152-93bc-b022d9720e4d",
+        "f863bbea-1069-4f0b-b760-43b64a81a465": {
+          "id": "f863bbea-1069-4f0b-b760-43b64a81a465",
           "tag": "input",
           "label": "URL",
-          "value": "https://www.segasammy.co.jp",
+          "value": "http://koishikawa.co.jp",
+          "parent": "7158771f-9253-45db-b90c-b57201cc66d7",
           "fieldId": "custom",
-          "order": 6
+          "order": 3
+        },
+        "5afcd76d-224b-4aa1-b141-d81f18845eed": {
+          "id": "5afcd76d-224b-4aa1-b141-d81f18845eed",
+          "tag": "input",
+          "label": "メールアドレス",
+          "value": "m-sasaki@koishikawa.co.jp",
+          "fieldId": "custom",
+          "order": 4
+        },
+        "0442d97d-ccec-43e7-bcd7-1676545917fa": {
+          "id": "0442d97d-ccec-43e7-bcd7-1676545917fa",
+          "tag": "input",
+          "label": "連結会社電話番号",
+          "value": "090-4727-1293",
+          "parent": "4693d652-47c9-418b-90d2-d29963beb0fc",
+          "fieldId": "companyTel",
+          "order": 5
         }
       }
+    },
+    "b10f3889-48d5-4c63-bdf0-0dac4f512e74": {
+      "name": "裏",
+      "elements": {}
     }
   }
 }
