@@ -1,67 +1,62 @@
 {
   "token": "da5e7651ed923989aace98377cc58e1ac7a6ae01050c65c02257cb62258ce2e3",
-  "layoutId": "TH9xcSXe05BIkg1mS8S8",
+  "layoutId": "nxryTw0bEVfYyE6s3IbH",
   "version": "1.0.0",
   "inputs": {
-    "ab8bc75f-5e44-46bb-a5a1-270c5b691a34": {
+    "0532a38c-f241-40d3-9f41-707cd9f5cc4e": {
       "name": "表",
       "elements": {
-        "307e3f84-e573-4add-bc3d-2ee1080bb9cb": {
-          "id": "307e3f84-e573-4add-bc3d-2ee1080bb9cb",
-          "tag": "input",
-          "label": "役職",
-          "value": "代表取締役 社長",
-          "parent": "34ac8914-7bd6-4f8e-af73-28c322927eb6",
+        "950a6db1-c196-4dbb-b265-39c716a4e6e4": {
+          "id": "950a6db1-c196-4dbb-b265-39c716a4e6e4",
+          "tag": "textArea",
+          "label": "氏名（英語）",
+          "value": "Marina\nHatanaka",
           "fieldId": "custom",
           "order": 0
         },
-        "a12dbf4c-1168-46f3-99eb-b2be9b52b0b4": {
-          "id": "a12dbf4c-1168-46f3-99eb-b2be9b52b0b4",
+        "31b6ccbd-f98a-4e70-9e38-44bcf8561805": {
+          "id": "31b6ccbd-f98a-4e70-9e38-44bcf8561805",
           "tag": "input",
           "label": "氏名（姓名）",
-          "value": "佐々木",
-          "parent": "c4c01191-b93c-4c85-b802-934109b12b8b",
+          "value": "畑中 万里奈",
           "fieldId": "name",
           "order": 1
         },
-        "a1711fd4-3002-4efb-ab24-90d898fc5ca2": {
-          "id": "a1711fd4-3002-4efb-ab24-90d898fc5ca2",
+        "876958b0-8f30-46bd-8174-ceee4bb297ca": {
+          "id": "876958b0-8f30-46bd-8174-ceee4bb297ca",
           "tag": "input",
-          "label": "氏名（姓名）",
-          "value": "政充",
-          "parent": "c4c01191-b93c-4c85-b802-934109b12b8b",
-          "fieldId": "name",
+          "label": "役職",
+          "value": "Research Executive (Intern)",
+          "fieldId": "custom",
           "order": 2
         },
-        "f863bbea-1069-4f0b-b760-43b64a81a465": {
-          "id": "f863bbea-1069-4f0b-b760-43b64a81a465",
-          "tag": "input",
-          "label": "URL",
-          "value": "http://koishikawa.co.jp",
-          "parent": "7158771f-9253-45db-b90c-b57201cc66d7",
-          "fieldId": "custom",
-          "order": 3
-        },
-        "5afcd76d-224b-4aa1-b141-d81f18845eed": {
-          "id": "5afcd76d-224b-4aa1-b141-d81f18845eed",
+        "033f3649-eeb2-4d13-b996-0f7b92899df7": {
+          "id": "033f3649-eeb2-4d13-b996-0f7b92899df7",
           "tag": "input",
           "label": "メールアドレス",
-          "value": "m-sasaki@koishikawa.co.jp",
-          "fieldId": "custom",
+          "value": "marina.hatanaka@abc-horizon.sg",
+          "fieldId": "emailAddress",
+          "order": 3
+        },
+        "3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85": {
+          "id": "3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85",
+          "tag": "textArea",
+          "label": "連結住所",
+          "value": "152BeachRoad, #18-05Gateway East, Singapore 189721",
+          "fieldId": "address",
           "order": 4
         },
-        "0442d97d-ccec-43e7-bcd7-1676545917fa": {
-          "id": "0442d97d-ccec-43e7-bcd7-1676545917fa",
+        "075dae66-5c40-4a9c-b121-76364d3a2dd8": {
+          "id": "075dae66-5c40-4a9c-b121-76364d3a2dd8",
           "tag": "input",
           "label": "連結会社電話番号",
-          "value": "090-4727-1293",
-          "parent": "4693d652-47c9-418b-90d2-d29963beb0fc",
+          "value": "+65 6291 5457",
           "fieldId": "companyTel",
           "order": 5
         }
       }
     },
-    "b10f3889-48d5-4c63-bdf0-0dac4f512e74": {
+    "ed787533-4200-41fc-8343-f1f4f12a5aad": {
       "name": "裏",
       "elements": {}
     }
