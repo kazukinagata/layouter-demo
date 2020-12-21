@@ -42,7 +42,7 @@
           "id": "3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85",
           "tag": "textArea",
           "label": "連結住所",
-          "value": "152BeachRoad, #18-05Gateway East, Singapore 189721",
+          "value": "152BeachRoad, #18-05Gateway East,\nSingapore 189721",
           "fieldId": "address",
           "order": 4
         },
