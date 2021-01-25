@@ -1,64 +1,52 @@
 {
   "token": "da5e7651ed923989aace98377cc58e1ac7a6ae01050c65c02257cb62258ce2e3",
-  "layoutId": "nxryTw0bEVfYyE6s3IbH",
-  "version": "1.0.0",
+  "layoutId": "JuhfkD3dH5RoTETEUALl",
+  "version": 3,
   "inputs": {
-    "0532a38c-f241-40d3-9f41-707cd9f5cc4e": {
-      "name": "表",
+    "24119cc4-1246-424f-8bf2-ff1359bbdcd3": {
+      "name": "新しいページ",
       "elements": {
-        "950a6db1-c196-4dbb-b265-39c716a4e6e4": {
-          "id": "950a6db1-c196-4dbb-b265-39c716a4e6e4",
-          "tag": "textArea",
-          "label": "氏名（英語）",
-          "value": "Marina\nHatanaka",
-          "fieldId": "custom",
-          "order": 0
-        },
-        "31b6ccbd-f98a-4e70-9e38-44bcf8561805": {
-          "id": "31b6ccbd-f98a-4e70-9e38-44bcf8561805",
+        "116c0e92-2ca4-4152-8069-eb842cf128af": {
+          "id": "116c0e92-2ca4-4152-8069-eb842cf128af",
           "tag": "input",
           "label": "氏名（姓名）",
-          "value": "畑中 万里奈",
+          "value": "鈴木 あゆみ",
           "fieldId": "name",
+          "order": 0
+        },
+        "b118451a-b57d-4ac6-9c9a-41201b23eca0": {
+          "id": "b118451a-b57d-4ac6-9c9a-41201b23eca0",
+          "tag": "input",
+          "label": "連結住所",
+          "value": "〒141-0033 東京都品川区西品川一丁目１番１号 住友不動産大崎ガーデンタワー8F",
+          "fieldId": "address",
           "order": 1
         },
-        "876958b0-8f30-46bd-8174-ceee4bb297ca": {
-          "id": "876958b0-8f30-46bd-8174-ceee4bb297ca",
+        "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e": {
+          "id": "64edf17c-bde3-49a3-9c16-d5c20b0b3c1e",
           "tag": "input",
-          "label": "役職",
-          "value": "Research Executive (Intern)",
-          "fieldId": "custom",
+          "label": "会社名",
+          "value": "セガサミーグループ本社 “GRAND HARBOR”",
+          "fieldId": "companyName",
           "order": 2
         },
-        "033f3649-eeb2-4d13-b996-0f7b92899df7": {
-          "id": "033f3649-eeb2-4d13-b996-0f7b92899df7",
-          "tag": "input",
-          "label": "メールアドレス",
-          "value": "marina.hatanaka@abc-horizon.sg",
-          "fieldId": "emailAddress",
-          "order": 3
-        },
-        "3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85": {
-          "id": "3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85",
-          "tag": "textArea",
-          "label": "連結住所",
-          "value": "152BeachRoad, #18-05Gateway East,\nSingapore 189721",
-          "fieldId": "address",
-          "order": 4
-        },
-        "075dae66-5c40-4a9c-b121-76364d3a2dd8": {
-          "id": "075dae66-5c40-4a9c-b121-76364d3a2dd8",
+        "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59": {
+          "id": "dfa91a2a-77e6-45e0-bc2e-862b0ae2aa59",
           "tag": "input",
           "label": "連結会社電話番号",
-          "value": "+65 6291 5457",
+          "value": "Tel 03-6864-3332 Fax 050-3153-7987",
           "fieldId": "companyTel",
-          "order": 5
+          "order": 3
+        },
+        "ba543ead-65d8-4152-93bc-b022d9720e4d": {
+          "id": "ba543ead-65d8-4152-93bc-b022d9720e4d",
+          "tag": "input",
+          "label": "URL",
+          "value": "https://www.segasammy.co.jp",
+          "fieldId": "custom",
+          "order": 4
         }
       }
-    },
-    "ed787533-4200-41fc-8343-f1f4f12a5aad": {
-      "name": "裏",
-      "elements": {}
     }
   }
 }

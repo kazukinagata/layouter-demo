@@ -15,163 +15,33 @@ type SampleData = { [key: string]: { uuid: string; value: string }[] }
 const data: SampleData = {
   '1': [
     {
-      // 氏名（英語）
-      uuid: '950a6db1-c196-4dbb-b265-39c716a4e6e4',
-      value: 'Osamu\nNara',
-    },
-    {
-      // 氏名
-      uuid: '31b6ccbd-f98a-4e70-9e38-44bcf8561805',
-      value: '',
-    },
-    {
-      // 役職
-      uuid: '876958b0-8f30-46bd-8174-ceee4bb297ca',
-      value: 'Managing Director',
-    },
-    {
-      // Email
-      uuid: '033f3649-eeb2-4d13-b996-0f7b92899df7',
-      value: 'osamu.nara@abc-horizon.sg'
-    },
-    {
-      // 住所
-      uuid: '3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85',
-      value: '152 Beach Road, #18-05 Gateway East,\nSingapore 189721'
-    },
-    {
-      // 電話番号
-      uuid: '075dae66-5c40-4a9c-b121-76364d3a2dd8',
-      value: '+65 6291 5457'
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
+      value: '木村拓哉',
     },
   ],
   '2': [
     {
-      // 氏名（英語）
-      uuid: '950a6db1-c196-4dbb-b265-39c716a4e6e4',
-      value: 'Ken\nTaguma',
-    },
-    {
-      // 氏名
-      uuid: '31b6ccbd-f98a-4e70-9e38-44bcf8561805',
-      value: '',
-    },
-    {
-      // 役職
-      uuid: '876958b0-8f30-46bd-8174-ceee4bb297ca',
-      value: 'Senior Consultant',
-    },
-    {
-      // Email
-      uuid: '033f3649-eeb2-4d13-b996-0f7b92899df7',
-      value: 'ken.taguma@abc-horizon.sg'
-    },
-    {
-      // 住所
-      uuid: '3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85',
-      value: '152 Beach Road, #18-05 Gateway East,\nSingapore 189721'
-    },
-    {
-      // 電話番号
-      uuid: '075dae66-5c40-4a9c-b121-76364d3a2dd8',
-      value: '+65 6291 5457'
-    },
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
+      value: '草彅剛',
+    }
   ],
   '3': [
     {
-      // 氏名（英語）
-      uuid: '950a6db1-c196-4dbb-b265-39c716a4e6e4',
-      value: 'Anna\nTeo',
-    },
-    {
-      // 氏名
-      uuid: '31b6ccbd-f98a-4e70-9e38-44bcf8561805',
-      value: '',
-    },
-    {
-      // 役職
-      uuid: '876958b0-8f30-46bd-8174-ceee4bb297ca',
-      value: 'Business Director',
-    },
-    {
-      // Email
-      uuid: '033f3649-eeb2-4d13-b996-0f7b92899df7',
-      value: 'anna.teo@abc-horizon.sg'
-    },
-    {
-      // 住所
-      uuid: '3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85',
-      value: '152 Beach Road, #18-05 Gateway East,\nSingapore 189721'
-    },
-    {
-      // 電話番号
-      uuid: '075dae66-5c40-4a9c-b121-76364d3a2dd8',
-      value: '+65 6291 5457'
-    },
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
+      value: '香取慎吾',
+    }
   ],
   '4': [
     {
-      // 氏名（英語）
-      uuid: '950a6db1-c196-4dbb-b265-39c716a4e6e4',
-      value: 'Hanae\nYanai',
-    },
-    {
-      // 氏名
-      uuid: '31b6ccbd-f98a-4e70-9e38-44bcf8561805',
-      value: '',
-    },
-    {
-      // 役職
-      uuid: '876958b0-8f30-46bd-8174-ceee4bb297ca',
-      value: 'Office Manager',
-    },
-    {
-      // Email
-      uuid: '033f3649-eeb2-4d13-b996-0f7b92899df7',
-      value: 'h.yanai@abc-horizon.sg'
-    },
-    {
-      // 住所
-      uuid: '3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85',
-      value: '152 Beach Road, #18-05 Gateway East,\nSingapore 189721'
-    },
-    {
-      // 電話番号
-      uuid: '075dae66-5c40-4a9c-b121-76364d3a2dd8',
-      value: '+65 6291 5457'
-    },
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
+      value: '稲垣吾郎',
+    }
   ],
   '5': [
     {
-      // 氏名（英語）
-      uuid: '950a6db1-c196-4dbb-b265-39c716a4e6e4',
-      value: 'Ain\nZulkifni',
-    },
-    {
-      // 氏名
-      uuid: '31b6ccbd-f98a-4e70-9e38-44bcf8561805',
-      value: '',
-    },
-    {
-      // 役職
-      uuid: '876958b0-8f30-46bd-8174-ceee4bb297ca',
-      value: 'Senior Account Manager',
-    },
-    {
-      // Email
-      uuid: '033f3649-eeb2-4d13-b996-0f7b92899df7',
-      value: 'ain@abc-horizon.sg'
-    },
-    {
-      // 住所
-      uuid: '3a2d1c97-e4f2-4b5e-a3e4-2dac7cdfda85',
-      value: '152 Beach Road, #18-05 Gateway East,\nSingapore 189721'
-    },
-    {
-      // 電話番号
-      uuid: '075dae66-5c40-4a9c-b121-76364d3a2dd8',
-      value: '+65 6291 5457'
-    },
+      uuid: '116c0e92-2ca4-4152-8069-eb842cf128af',
+      value: '中居正広',
+    }
   ],
 }
 
@@ -196,6 +66,7 @@ export default function App() {
   const helper = new ClientHelper(
     config.token,
     config.layoutId,
+    config.version,
     process.env.REACT_APP_API_ROOT,
     true
   )
@@ -249,7 +120,6 @@ export default function App() {
   const handlePreview = async () => {
     try {
       setLoading(true)
-      console.log(ClientHelper.prepareData(data))
       const res = await helper.update(ClientHelper.prepareData(data))
       setSvgs(res.svg)
       setPDF(res.pdf)
